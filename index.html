@@ -5,15 +5,87 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>CoolLaboratory</title>
   
+  <link rel="icon" type="image/png" href="favicon.png" />
   <style>
-    body {font-family: 'Lato';}
+    :root {
+      --font-fam: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+    }
+
+    body {
+      font-family:var(--font-fam, sans-serif);
+      background-color: #212121;
+      color: #f0ffff;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    header {
+      background-color: #0e0e0e;
+      height: 60px;
+      border-radius: .25rem;
+      margin-top: 2rem;
+      transform: translateY(-160%);
+    }
+
+    header .raw {
+      display: flex;
+      height: 100%;
+      align-items: center;
+      justify-content: space-between;
+      margin: 0 1rem;
+    }
+
+    main {
+      margin-top: 3rem;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, auto);
+      grid-template-rows: repeat(2, auto);
+      grid-gap: 2rem;
+    }
+
+    .box {
+      opacity: 0;
+      border: 2px solid #f0ffff;
+      height: 250px;
+    }
   </style>
 </head>
 <body>
 
-  <h1>Welcome to CoolLaboratory</h1>
-  <p>the place where 'code' is an art</p>
+  <header>
+    <div class="raw">
+      <section>
+        <span>coolLaboratory</span>
+      </section>
 
+      <section>
+        <span>coolLaboratory</span>
+      </section>
+    </div>
+  </header>
+
+  <main>
+
+    <div class="grid">
+
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+
+
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+
+
+    </div>
+
+
+  </main>
+
+  <script src="./layout.js"></script>
   <script type="module" src="/main.mjs"></script>
 </body>
 </html>
