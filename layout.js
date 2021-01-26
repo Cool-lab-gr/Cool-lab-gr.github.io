@@ -22,8 +22,9 @@ document.querySelectorAll('.box').forEach(box => {
 setTimeout(() => {
   document.querySelector("header").animate(headerKeyframes, headerOptions);
 
-  document.querySelectorAll('.box').forEach((box, key) => {
-
+  Array.from(
+    document.querySelectorAll('.box')
+  ).forEach((box, key) => {
     setTimeout(() => {
       box.animate([
         {opacity: 1}
